@@ -12,7 +12,7 @@ const port = 3000;
 
 // app.use(urlCheck); // for global routes middleware working for all routes(url)
 router.get('/', urlCheck, (req, res) => {
-	res.send('Hello Mohsin to home page');
+	res.send('Hello Mohsin to home page here');
 });
 app.post('/', (req, res) => {
 	res.send('Post request at home page');
