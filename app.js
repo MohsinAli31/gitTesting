@@ -12,13 +12,13 @@ const port = 3000;
 
 // app.use(urlCheck); // for global routes middleware working for all routes(url)
 router.get('/', urlCheck, (req, res) => {
-	res.send('Hello World!');
+	res.send('Hello Mohsin to home page');
 });
 app.post('/', (req, res) => {
-	res.send('Got a POST request');
+	res.send('Post request at home page');
 });
 router.put('/user', urlCheck, (req, res) => {
-	res.send('Got a PUT request at /user');
+	res.send('PUT request at /user and applying middleware');
 });
 router.delete('/delete', urlCheck, (req, res) => {
 	res.send('Got a DELETE request at /user');
@@ -26,5 +26,5 @@ router.delete('/delete', urlCheck, (req, res) => {
 app.use('/', router); //for specific route working for specific url
 
 app.listen(port, () => {
-	console.log(`Example app listening on port ${port}`);
+	console.log(`app listening on port ${port}`);
 });
