@@ -9,16 +9,12 @@ const port = 3000;
 // 	res.send('USER API CALLED');
 // 	next();
 // });
-
+//new branch here now to push
 // app.use(urlCheck); // for global routes middleware working for all routes(url)
 
 // router.get('/', urlCheck, (req, res) => {
 // 	res.send('Hello Mohsin to home page here');
 // });
-
-router.get('/', urlCheck, (req, res) => {
-	res.send('Hello Mohsin to home page here');
-});
 
 app.post('/', (req, res) => {
 	res.send('Post request at home page');
@@ -32,7 +28,7 @@ router.put('/user', urlCheck, (req, res) => {
 router.delete('/delete', urlCheck, (req, res) => {
 	res.send('Got a DELETE request at /user');
 });
-app.use('/', router); //for specific route working for specific url
+app.use('/', router); //for specific route working for specific url  74c1c8b
 
 app.listen(port, () => {
 	console.log(`app listening on port ${port}`);
